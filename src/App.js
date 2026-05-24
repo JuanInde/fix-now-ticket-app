@@ -1,3 +1,4 @@
+// Se implementan reportes
 "use client"
 
 import { useState } from "react"
