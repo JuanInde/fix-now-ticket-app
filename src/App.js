@@ -1,4 +1,3 @@
-// Mejora funcionalidad login
 "use client"
 
 import { useState } from "react"
