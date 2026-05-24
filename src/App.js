@@ -1,3 +1,4 @@
+// Registro de tickets actualizado
 "use client"
 
 import { useState } from "react"
