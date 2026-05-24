@@ -1,4 +1,4 @@
-// Se implementa asignacion de tickets
+// Se implementa estado tickets
 "use client"
 
 import { useState } from "react"
