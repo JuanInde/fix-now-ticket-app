@@ -1,5 +1,4 @@
-// Se implementa estado tickets
-"use client"
+// Mejoras sistema tickets
 
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
