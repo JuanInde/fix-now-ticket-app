@@ -5,6 +5,19 @@ import { Link } from "react-router-dom"
 import { getTickets } from "../services/ticketService"
 import "../styles/TicketList.css"
 
+// Refactorización: reemplazo de condicionales por estructuras de mapeo para simplificar la asignación de estilos
+const PRIORITY_COLORS = {
+  "Alta": "priority-alta",
+  "Media": "priority-media",
+  "Baja": "priority-baja"
+};
+
+const STATUS_COLORS = {
+  "Abierto": "status-abierto",
+  "En proceso": "status-proceso",
+  "Cerrado": "status-cerrado"
+};
+
 const TicketList = () => {
   const [tickets, setTickets] = useState([])
   const [loading, setLoading] = useState(true)
@@ -29,31 +42,9 @@ const TicketList = () => {
     }
   }
 
-  const getPriorityColor = (priority) => {
-    switch (priority) {
-      case "Alta":
-        return "priority-alta"
-      case "Media":
-        return "priority-media"
-      case "Baja":
-        return "priority-baja"
-      default:
-        return ""
-    }
-  }
-
-  const getStatusColor = (status) => {
-    switch (status) {
-      case "Abierto":
-        return "status-abierto"
-      case "En proceso":
-        return "status-proceso"
-      case "Cerrado":
-        return "status-cerrado"
-      default:
-        return ""
-    }
-  }
+  // Uso de los diccionarios (mucho más limpio que los switch)
+  const getPriorityColor = (priority) => PRIORITY_COLORS[priority] || "";
+  const getStatusColor = (status) => STATUS_COLORS[status] || "";
 
   const filteredTickets = tickets.filter((ticket) => {
     if (filter === "Todos") return true

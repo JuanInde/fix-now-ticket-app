@@ -24,7 +24,8 @@ const CreateTicket = () => {
     }))
   }
 
-  const handleSubmit = async (e) => {
+  // Refactorización: renombrado de función para reflejar claramente su responsabilidad
+  const handleTicketFormSubmit = async (e) => {
     e.preventDefault()
     setError(null)
 
@@ -52,7 +53,7 @@ const CreateTicket = () => {
 
         {error && <p className="error-message">{error}</p>}
 
-        <form onSubmit={handleSubmit} className="create-form">
+        <form onSubmit={handleTicketFormSubmit} className="create-form">
           <div className="form-group">
             <label htmlFor="title">Título del Ticket *</label>
             <input
