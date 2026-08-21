@@ -26,31 +26,36 @@ Una aplicación web moderna y funcional para gestionar tickets de soporte técni
 
 ## Estructura del Proyecto
 
-\`\`\`
+```text
 fixnow/
 ├── public/
-│   └── index.html              # HTML principal
+│   └── index.html                  # HTML principal
+│
 ├── src/
 │   ├── components/
-│   │   ├── CreateTicket.js     # Componente para crear tickets
-│   │   ├── TicketDetail.js     # Componente de detalle del ticket
-│   │   └── TicketList.js       # Componente para listar tickets
+│   │   ├── CreateTicket.js         # Componente para crear tickets
+│   │   ├── TicketDetail.js         # Componente de detalle del ticket
+│   │   └── TicketList.js           # Componente para listar tickets
+│   │
 │   ├── models/
-│   │   └── Ticket.js           # Modelo de Ticket
+│   │   └── Ticket.js               # Modelo de Ticket
+│   │
 │   ├── services/
-│   │   └── ticketService.js    # Servicio API con Axios
+│   │   └── ticketService.js        # Servicio API con Axios
+│   │
 │   ├── styles/
-│   │   ├── index.css           # Estilos globales
-│   │   ├── App.css             # Estilos de la app
-│   │   ├── TicketList.css      # Estilos de la lista
-│   │   ├── TicketDetail.css    # Estilos del detalle
-│   │   └── CreateTicket.css    # Estilos de crear ticket
-│   ├── App.js                  # Componente principal
-│   └── index.js                # Punto de entrada
-├── server.js                   # Servidor Express
-└── package.json               # Dependencias
-\`\`\`
-
+│   │   ├── index.css               # Estilos globales
+│   │   ├── App.css                 # Estilos de la app
+│   │   ├── TicketList.css          # Estilos de la lista
+│   │   ├── TicketDetail.css        # Estilos del detalle
+│   │   └── CreateTicket.css         # Estilos de crear ticket
+│   │
+│   ├── App.js                      # Componente principal
+│   └── index.js                    # Punto de entrada
+│
+├── server.js                       # Servidor Express
+└── package.json                    # Dependencias
+```
 ## Instalación
 
 ### Requisitos Previos
